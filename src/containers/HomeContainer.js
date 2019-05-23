@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 import AppFrame from '../components/AppFrame';
 import CustomersActions from '../components/CustomersActions';
@@ -28,9 +27,6 @@ class HomeContainer extends Component {
     }
 }
 
-HomeContainer.propTypes = {
-
-};
 
 // con el withRouter nos aseguramos que al componente se le inyecten las propiedades de navegacion, como history
 export default withRouter(HomeContainer);

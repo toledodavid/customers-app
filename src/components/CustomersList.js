@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import CustomerListItem from './CustomerListItem';
 
 
-const CustomerList = ({customers}) => {
+const CustomersList = ({customers, urlPath}) => {
     return (
         <div>
             <div className="customers-list">
                 {
                     customers.map(c =>
                     
-                        <CustomerListItem key={c.dni} name={c.name} editAction={'Editar'} delAction={'Eliminar'} urlPath={urlPath}></CustomerListItem>
+                        <CustomerListItem key={c.dni} name={c.name} dni={c.dni} editAction={'Editar'} delAction={'Eliminar'} urlPath={urlPath}></CustomerListItem>
                         
                     )
                 }
@@ -20,9 +20,9 @@ const CustomerList = ({customers}) => {
 };
 
 
-CustomerList.propTypes = {
+CustomersList.propTypes = {
     customers: PropTypes.array.isRequired,
     urlPath: PropTypes.string.isRequired
 };
 
-export default CustomerList;
+export default CustomersList;
