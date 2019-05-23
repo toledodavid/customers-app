@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.app-frame{
+  margin: 5%;
+  padding: 30px;
+  width: calc(80vw);
+
+  background: #b8b8b8;
+}
+
+.customers-actions{
+  background: #aaa;
+  padding:10px;
+  margin: 10px;
+}
+
+.customers-actions button{
+  background: white;
+  min-width: 100px;
+  height: 30px;
+  margin: 5px;
+}
