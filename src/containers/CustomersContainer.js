@@ -9,7 +9,7 @@ import {fetchCustomers} from './../actions/fetchCustomers';
 
 
 
-const customers = [
+/*const customers = [
     {
         "dni": "27000000",
         "name": "Juan Perez",
@@ -25,7 +25,7 @@ const customers = [
         "name": "Luis Martinez",
         "age": 32
     }
-];
+];*/
 
 
 class CustomersContainer extends Component {
@@ -51,14 +51,19 @@ class CustomersContainer extends Component {
     render() {
         return(
             <div>
-                <AppFrame header={'Listado de clientes'} body={this.renderBody(customers)}></AppFrame>
+                <AppFrame header={'Listado de clientes'} body={this.renderBody(this.props.customers)}></AppFrame>
             </div>
         );
     }
 }
 
 CustomersContainer.propTypes = {
-    fetchCustomers: PropTypes.func.isRequired
+    fetchCustomers: PropTypes.func.isRequired,
+    customers: PropTypes.array.isRequired
+};
+
+CustomersContainer.defaultProps = {
+    customers: []
 };
 
 const mapDispatchToProps = { fetchCustomers };
